@@ -1,0 +1,15 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def main():
+    
+    
+    y, x = np.ogrid[-7:7:100j, -7:7:100j]
+    plt.contour(x.ravel(), y.ravel(), pow(y, 2) - pow(x, 3) -3*pow(x,2)  - x, [0])
+    plt.contour(x.ravel(), y.ravel(), y - x-1, [0])
+    plt.grid()
+    plt.show()
+
+
+if __name__ == '__main__':
+    main()
